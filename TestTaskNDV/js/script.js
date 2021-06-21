@@ -28,7 +28,7 @@ const togglePopUp = () => {
   });
 };
 
-togglePopUp();
+// togglePopUp();
 
 // JS-функция определения поддержки WebP
 
