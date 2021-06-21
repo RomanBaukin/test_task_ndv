@@ -1,0 +1,67 @@
+@mixin font($font_name, $file_name, $weight, $style) {
+
+  @font-face {
+    font-family: $font_name;
+    font-display: swap;
+    src: url("../fonts/#{$file_name}.woff") format("woff"),
+    url("../fonts/#{$file_name}.woff2") format("woff2");
+    font-weight: #{$weight};
+    font-style: #{$style};
+  }
+}
+
+@import "fonts";
+@import "base/normalize";
+@import "base/variables";
+@import "blocks/_header";
+@import "base/media";
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "CeraPro", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+button {
+  display: block;
+  height: 50px;
+  padding: 16px 60px;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #000000;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 100%;
+}
